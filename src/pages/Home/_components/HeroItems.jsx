@@ -15,7 +15,7 @@ export const CarouselItems = [
         title: 'Docs',
         icon: FileText,
         description: "Simple, powerful, beautiful. Next-gen notes & docs.",
-        image: '/doodles/PettingDoodle.svg',
+        image: '/doodles/MoshingDoodle.svg',
     },
     {
         id: 3,

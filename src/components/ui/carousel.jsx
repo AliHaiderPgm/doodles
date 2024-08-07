@@ -48,7 +48,7 @@ const Carousel = ({ topNav = false, caption = false, bottomCaption = false, indi
                                 key={activeTab.id}
                                 initial={{ opacity: 0, y: 10 }}
                                 animate={{ opacity: 1, y: 0 }}
-                                transition={{ duration: 0.4 }}
+                                transition={{ duration: 0.4, delay: 0.3 }}
                             >
                                 <div className='flex items-center justify-center gap-2 w-full'>
                                     <activeTab.icon className={`${activeTab.color}`} />
@@ -59,48 +59,53 @@ const Carousel = ({ topNav = false, caption = false, bottomCaption = false, indi
                     }
                 </div>}
                 {/* Image and Caption */}
-                <div className='relative'>
+                <div className='relative space-y-4'>
+                    {caption && data.map(item => {
+                        return item.id === activeTab.id ?
+                            <motion.div
+                                initial={{ opacity: 0, y: 10 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                transition={{ duration: 0.5 }}
+                                key={item.id}
+                                className='min-h-20'
+                            >
+                                <div className='flex flex-col md:flex-row items-center md:justify-center gap-1 select-none'>
+                                    <p className='text-base font-semibold text-center'>{item.description}</p>
+                                    <Link className={`${item.color} hover:underline`}>
+                                        Learn More
+                                        <ArrowRight className='inline' size={16} />
+                                    </Link>
+                                </div>
+                            </motion.div>
+                            : null
+                    })}
                     {data.map(item => {
                         return item.id === activeTab.id ?
-                            <div className='space-y-8' key={item.id}>
-                                {caption && <motion.div
-                                    initial={{ opacity: 0, y: 10 }}
-                                    animate={{ opacity: 1, y: 0 }}
-                                    transition={{ duration: 0.4 }}
-                                >
-                                    <div className='flex flex-col md:flex-row items-center md:justify-center gap-1 select-none'>
-                                        <p className='text-base font-semibold text-center'>{item.description}</p>
-                                        <Link className={`${item.color} hover:underline`}>
-                                            Learn More
-                                            <ArrowRight className='inline' size={16} />
-                                        </Link>
-                                    </div>
-                                </motion.div>
-                                }
+                            <div key={item.id}>
                                 <motion.div
                                     initial={{ opacity: 0 }}
                                     animate={{ opacity: 1 }}
                                     transition={{ duration: 0.4 }}
                                 >
-                                    <img src={item.image} alt={item.description} className={`select-none mx-auto ${imageClassName}`} height={800} width={1000} />
+                                    <img src={item.image} alt={item.description} className={`select-none mx-auto h-[300px] md:h-[500px] ${imageClassName}`} height={800} width={1000} />
                                 </motion.div>
                                 {bottomCaption && <p className='text-center'>{item.description}</p>}
                             </div>
                             : null
                     })}
+                    <div className={`absolute w-full h-[calc(100%_-_${indicators ? '10' : '5'}rem)] top-12 cursor-pointer`}>
+                        <div className='w-1/2 h-full absolute left-0 top-0 group' onClick={handlePrev}>
+                            <Button size="icon" className="rounded-full absolute top-1/2 left-0 shadow-md md:opacity-0 group-hover:opacity-100 transition-opacity duration-200" aria-label="previous slide"><ArrowLeftIcon /></Button>
+                        </div>
+                        <div className='w-1/2 h-full absolute right-0 top-0 group' onClick={handleNext}>
+                            <Button size="icon" className="rounded-full absolute top-1/2 right-0 shadow-md md:opacity-0 group-hover:opacity-100 transition-opacity duration-200" aria-label="next slide"><ArrowRightIcon /></Button>
+                        </div>
+                    </div>
+
                     {indicators && <div className='flex gap-1 justify-center my-2'>
                         {data.map(i => <div className={`h-2 w-2 rounded-full ${i.id === activeTab.id ? "bg-gray-800" : "bg-gray-800/10"}`} key={i.id} />)}
                     </div>
                     }
-                    {/* Navigation buttons */}
-                    <div className='absolute w-full h-[calc(100%_-_3rem)] top-12 cursor-pointer'>
-                        <div className='w-1/2 h-full absolute left-0 top-0 group' onClick={handlePrev}>
-                            <Button size="icon" className="rounded-full absolute top-1/2 left-4 shadow-md md:opacity-0 group-hover:opacity-100 transition-opacity duration-200" aria-label="previous slide"><ArrowLeftIcon /></Button>
-                        </div>
-                        <div className='w-1/2 h-full absolute right-0 top-0 group' onClick={handleNext}>
-                            <Button size="icon" className="rounded-full absolute top-1/2 right-4 shadow-md md:opacity-0 group-hover:opacity-100 transition-opacity duration-200" aria-label="next slide"><ArrowRightIcon /></Button>
-                        </div>
-                    </div>
                 </div>
             </div>
             <div className="carousel"></div>
