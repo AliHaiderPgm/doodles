@@ -49,7 +49,7 @@ const HeroSection = () => {
                 </blockquote>
                 <p className='font-semibold text-xl font-serif'>Thoughts</p>
             </div>
-            <div className='lg:w-3/4 2xl:w-1/2 mx-auto'>
+            <div className='lg:w-3/4 2xl:w-1/2 mx-auto px-6'>
                 <Carousel topNav caption data={CarouselItems} />
             </div>
         </>

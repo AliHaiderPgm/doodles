@@ -25,8 +25,7 @@ const Carousel = ({ topNav = false, caption = false, bottomCaption = false, indi
 
     return (
         <>
-            <div className='space-y-6 p-4'>
-                {/* Controller */}
+            <div className='space-y-6'>
                 {topNav && <div className='grid grid-cols-1 md:grid-cols-6 gap-x-8 w-4/5 mx-auto'>
                     {isLargeScreen ?
                         data.map(item => {
@@ -93,7 +92,7 @@ const Carousel = ({ topNav = false, caption = false, bottomCaption = false, indi
                             </div>
                             : null
                     })}
-                    <div className={`absolute w-full h-[calc(100%_-_${indicators ? '10' : '5'}rem)] top-12 cursor-pointer`}>
+                    <div className='absolute w-full h-[calc(100%_-_7rem)] top-12 cursor-pointer'>
                         <div className='w-1/2 h-full absolute left-0 top-0 group' onClick={handlePrev}>
                             <Button size="icon" className="rounded-full absolute top-1/2 left-0 shadow-md md:opacity-0 group-hover:opacity-100 transition-opacity duration-200" aria-label="previous slide"><ArrowLeftIcon /></Button>
                         </div>
