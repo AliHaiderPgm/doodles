@@ -4,7 +4,7 @@ import { Button } from './button'
 
 const Card = ({ icon: Icon, iconColor = 'text-blue-500', title, desc, image, component, className, heading, comment, getTemplate = false, hoverable = false }) => {
     return (
-        <div className={`bg-gray-800/5 rounded-xl
+        <div className={`bg-gray-800/5 rounded-xl shadow
         ${className} 
         ${hoverable ? 'hover:bg-gray-800/10 cursor-pointer transition-all' : ''} 
         ${image ? "grid grid-rows-3 lg:grid-rows-4 grid-cols-6" : ""}`
@@ -25,7 +25,7 @@ const Card = ({ icon: Icon, iconColor = 'text-blue-500', title, desc, image, com
             }
             {image &&
                 <div className='row-span-2 lg:row-span-3 col-span-5 col-start-2 relative'>
-                    <img src={image} alt={title} className='h-full w-full object-cover object-left-top ms-auto absolute bottom-0 right-0' />
+                    <img src={image} alt={title} className='h-full w-full object-cover object-left-top ms-auto absolute bottom-0 right-0 rounded-tl-md' />
                 </div>
             }
             {/* Carousel */}
