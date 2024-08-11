@@ -81,7 +81,7 @@ const Carousel = ({ topNav = false, caption = false, bottomCaption = false, indi
                     {data.map(item => {
                         return item.id === activeTab.id ?
                             <div key={item.id}>
-                                <div className='p-4 dark:bg-white rounded'>
+                                <div className='p-4 dark:bg-gray-300 rounded'>
                                     <motion.div
                                         initial={{ opacity: 0 }}
                                         animate={{ opacity: 1 }}

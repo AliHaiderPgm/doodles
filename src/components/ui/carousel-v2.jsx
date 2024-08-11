@@ -9,7 +9,7 @@ const CarouselV2 = ({ data, className, controls = "bottom", controlsWithIcon = f
     const largeScreen = useMediaQuery({ query: '(min-width: 1165px)' })
     return (
         <div className={`flex flex-col gap-4 md:p-4 mx-auto, ${className} ${controls === "bottom" ? "flex-col" : controls === "top" ? "flex-col-reverse" : ""}`}>
-            <div className='h-[180px] md:h-[300px] lg:h-[550px] w-full shadow-lg bg-white rounded-2xl border'>
+            <div className='h-[180px] md:h-[300px] lg:h-[550px] w-full shadow-lg bg-white dark:bg-gray-300 rounded-2xl border'>
                 <motion.div
                     key={activeItem.id}
                     initial={{ opacity: 0 }}
