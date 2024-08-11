@@ -13,7 +13,7 @@ const Templates = () => {
                     <Button variant="link" className="text-custom-blue text-base">Browser all template <ArrowRight size={16} /></Button>
                 </div>
                 <div className='col-span-6 lg:col-span-2 !col-end-13 relative top-1/3'>
-                    <img src="/doodles/dualPeek.png" alt="People peeking from top" className='ms-auto' />
+                    <img src="/doodles/dualPeek.png" alt="People peeking from top" className='ms-auto' height={200} width={300} />
                 </div>
             </div>
             <div className='grid grid-rows-3 grid-cols-4 gap-6'>

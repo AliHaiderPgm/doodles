@@ -9,7 +9,7 @@ const BuildingBlock = () => {
     return (
         <div className='mx-auto md:col-start-2 col-span-12 md:col-span-10 p-4 lg:p-2'>
             <div className='flex flex-col-reverse md:flex-row gap-4 md:items-center relative top-3 md:top-4'>
-                <img src="/doodles/topPeek.png" alt="Doodle peek from top" className='w-1/2 md:w-1/3 lg:w-auto' />
+                <img src="/doodles/topPeek.png" alt="Doodle peek from top" className='w-1/2 md:w-1/3 lg:w-auto dark:invert' height={80} width={100} />
                 <h2 className='text-4xl lg:text-5xl font-semibold text-center md:text-left'>Powerful building blocks</h2>
             </div>
             <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
@@ -23,17 +23,17 @@ const BuildingBlock = () => {
                 <Card
                     icon={Eye}
                     title="Customize the info you track" desc="Create your own labels, tags, owners, and more, so everyone has context and everything stays organized."
-                    image="/images/blockImage1.png"
+                    image="/images/blockImage1.avif"
                 />
                 <Card
                     icon={Palette}
                     title="Build any page, communicate any idea"
                     desc="Everything is drag and drop in Notion — images, toggles, to-do’s, even embedded databases."
-                    image="/images/blockImage2.png"
+                    image="/images/blockImage2.avif"
                 />
             </div>
             <div className='p-4'>
-                <Quote width="md:w-1/2" heading="Notion adapts to your needs. It’s as minimal or as powerful as you need it to be." logo="/images/fire.png" name="Rahim Makani" position="Director of Product, Matchgroup" />
+                <Quote width="md:w-1/2" heading="Notion adapts to your needs. It’s as minimal or as powerful as you need it to be." logo="/images/fire.avif" name="Rahim Makani" position="Director of Product, Matchgroup" />
             </div>
         </div>
     )

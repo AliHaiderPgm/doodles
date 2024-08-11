@@ -17,7 +17,7 @@ const CarouselV2 = ({ data, className, controls = "bottom", controlsWithIcon = f
                     transition={{ duration: 0.5 }}
                     className='h-full w-full p-4'
                 >
-                    <img src={activeItem.image} alt={activeItem.title} className='h-full w-full' />
+                    <img src={activeItem.image} alt={activeItem.title} className='h-full w-full' height={600} width={800} />
                 </motion.div>
             </div>
             <div className='flex gap-2 justify-center flex-wrap'>
@@ -27,7 +27,7 @@ const CarouselV2 = ({ data, className, controls = "bottom", controlsWithIcon = f
                         key={item.id}
                         variant="outline"
                         onClick={() => setActiveItem(item)}
-                        className={`flex flex-col gap-2 h-32 text-base  bg-gray-100 shadow-sm aspect-square ${item.id === activeItem.id ? 'bg-gray-100/5 hover:bg-gray-100/5 border' : 'border-none'}`}
+                        className={`flex flex-col gap-2 h-32 text-base  bg-gray-100 hover:bg-gray-100/50 dark:bg-gray-800/80 dark:hover:bg-gray-800/50 shadow-sm aspect-square ${item.id === activeItem.id ? 'bg-gray-100/5 hover:bg-gray-100/5 dark:bg-gray-800/25 dark:hover:bg-gray-800/25 border' : 'border-none'}`}
                     >
                         <item.icon size={56} />
                         {item.title}

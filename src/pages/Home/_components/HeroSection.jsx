@@ -5,6 +5,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { CarouselItems } from './HeroItems'
 import { SplitText } from '@/components/constant/SplitText'
+
 const HeroSection = () => {
     return (
         <>
@@ -19,10 +20,10 @@ const HeroSection = () => {
                 <p className='text-2xl font-medium text-center md:w-2/3 mx-auto'>Unleash your creativity with vibrant doodles <br /> that spark joy and imagination</p>
                 <div className='flex flex-wrap justify-center gap-4'>
                     <Link to="/">
-                        <Button className="bg-custom-blue hover:bg-custom-blue-hover text-base" size="sm">Get Doodles free</Button>
+                        <Button className="bg-custom-blue dark:text-white hover:bg-custom-blue-hover text-base" size="sm">Get Doodles free</Button>
                     </Link>
                     <Link to="/">
-                        <Button variant="ghost" size="sm" className="text-base text-custom-blue hover:text-custom-blue-hover hover:bg-blue-500/5">
+                        <Button variant="ghost" size="sm" className="text-base text-custom-blue dark:text-white hover:text-custom-blue-hover hover:bg-blue-500/5 dark:hover:bg-blue-500/20">
                             <div className='flex gap-1 items-center'>
                                 <p>Request a demo</p>
                                 <ArrowRight size={16} />
@@ -34,11 +35,11 @@ const HeroSection = () => {
             <div className='relative mt-0 lg:mt-8 max-w-screen-2xl mx-auto mb-8 lg:mb-32'>
                 <div className='overflow-hidden'>
                     <div className='w-screen lg:w-fit'>
-                        <img src="/doodles/LongHairDoodle.svg" alt="Long Hair Doodle" className='max-w-none lg:w-full ml-6 -mt-16 md:mt-0' loading='eager' height={1080} width={1920} />
+                        <img src="/doodles/LongHairDoodle.svg" alt="Long Hair Doodle" className='max-w-none lg:w-full ml-6 -mt-16 md:mt-0 dark:invert' loading='eager' height={1080} width={1920} />
                     </div>
                 </div>
-                <div className='hidden lg:block absolute top-0 left-1/2 -translate-x-1/2 w-2/3 xl:w-1/2'>
-                    <video src="/videos/screen-v2.mp4" autoPlay muted className='border shadow-lg rounded-lg aspect-800/480'>
+                <div className='hidden lg:block absolute top-0 left-1/2 -translate-x-1/2 w-2/3 xl:w-1/2 min-w-[800px]'>
+                    <video src="/videos/screen-v2.mp4" autoPlay muted className='border dark:border-white shadow-lg rounded-lg aspect-800/480 dark:invert'>
                         <track src="/videos/doodleCaption.vtt" kind="captions" srcLang="en" label="english_captions" />
                     </video>
                 </div>

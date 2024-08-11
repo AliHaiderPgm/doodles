@@ -11,7 +11,7 @@ const GetStarted = () => {
                 <Button size="sm">Try Notion Free</Button>
                 <Button variant="link" size="sm" className="text-custom-blue text-base">Request a demo <ArrowRight size={16} /></Button>
             </div>
-            <img src="/doodles/parade.png" alt="Parade" className='md:w-3/4 mx-auto' />
+            <img src="/doodles/parade.png" alt="Parade" className='md:w-3/4 mx-auto dark:invert' height={400} width={600} />
         </div>
     )
 }

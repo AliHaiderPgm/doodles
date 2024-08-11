@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  darkMode: ["class"],
+  darkMode: "class",
   content: [
     './pages/**/*.{js,jsx}',
     './components/**/*.{js,jsx}',
@@ -52,7 +52,8 @@ module.exports = {
           foreground: "hsl(var(--card-foreground))",
         },
         'custom-blue': '#0077b6',
-        'custom-blue-hover': '#00b4d8'
+        'custom-blue-hover': '#00b4d8',
+
       },
       borderRadius: {
         lg: "var(--radius)",

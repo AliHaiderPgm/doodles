@@ -11,7 +11,7 @@ const Footer = () => {
         <div className='grid grid-cols-12 mx-auto border-t p-6 md:p-12'>
             <div className='col-span-12 sm:col-span-10 xl:col-span-8 sm:col-start-2 xl:col-start-3 grid grid-cols-6 lg:grid-cols-5 gap-8 space-x-4 mx-auto text-nowrap'>
                 <div className='col-span-6 lg:col-span-1 space-y-4 lg:space-y-3'>
-                    <img src="/logos/full-logo.png" alt="Doodle" className='w-1/3 lg:w-3/4 mb-8' />
+                    <img src="/logos/full-logo.png" alt="Doodle" className='w-1/3 lg:w-3/4 mb-8' height={50} width={100} />
                     <div className='flex gap-2 flex-wrap lg:justify-center !mb-12'>
                         <Instagram size={28} className='hover:bg-gray-500/25 rounded p-1 hover:text-fuchsia-600' />
                         <Twitter size={28} className='hover:bg-gray-500/25 rounded p-1 hover:text-blue-500' />
